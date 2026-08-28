@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>WebXR Interior Design</title>
+  <link rel="stylesheet" href="styles/main.css" />
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.169.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.169.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="app">
+  <canvas id="xr-canvas"></canvas>
+<div id="ui-overlay">
+  <div id="furniture-picker">
+    <div id="category-tabs"></div>
+    <div id="furniture-scroll"></div>
+  </div>
+
+  <div id="object-controls" class="hidden">
+    <input type="range" id="rotate-slider" min="0" max="360" value="0" />
+    <button id="delete-btn">✕ Delete</button>
+  </div>
+
+  <button id="clear-scene-btn">🗑 Clear All</button>
+</div>
+</div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
